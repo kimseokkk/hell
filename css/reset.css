@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big,
+cite,codel,sup,i,img,strong,var,b,u,i,
+center,details,equiv,keygen,list,meter,q,ruby,s,time,tb,tr,tfoot,thead,textarea,optgroup,output,eventsource,
+canvas,datalist,kbd,label,map,noscript,samp,
+dl,hgroup,rp,ruby,var,body,caption,col,colgroup,input,optgroup,output,eventsource,details,equiv,keygen,list,meter,q,s,time,tb,tr,tfoot,thead,textarea,optgroup,output,eventsource,
+mark,audio-video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* HTML5 display-role reset for older browsers */
+article aside details figcaption figure footer header main menu nav section {
+	display:block; 
+}
+
+body {
+	line-height:1; 
+}
+
+ol ul {
+	list-style:none; 
+}
+
+blockquote q { 
+	quotes:none; 
+}
+
+blockquote:before blockquote:after q:before q:after { 
+	content:''; content:none; }
+
+table { border-collapse:collapse;border-spacing :0;}

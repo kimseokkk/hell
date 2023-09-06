@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>sw투어</title>
+</head>
+<body>
+    <header>
+        <div class="menu-search">
+            <div class="wrapper">
+                <div class="flex-container">
+                    <div class="leftmenu">
+                        <div class="menu-bar" onclick="toggleMenu()">
+                            <div class="bar bar-1"></div>
+                            <div class="bar bar-2"></div>
+                            <div class="bar bar-3"></div>
+                            <span class="menu-text">MENU</span>
+                            <ul class="dummy-menu">
+                                <li>메뉴1</li>
+                                <li>메뉴2</li>
+                                <li>메뉴4</li>
+                                <li>메뉴5</li>
+                                <li>메뉴6</li>
+                                <li>메뉴7</li>
+                                <li>메뉴8</li>
+                                <li>메뉴9</li>
+                                <li>메뉴10</li>
+                            </ul>
+                        </div> <!-- menu-bar -->
+                        
+                        <script>
+                            function toggleMenu() {
+                                var menu = document.querySelector(".dummy-menu");
+                                menu.classList.toggle("open");
+                        
+                                var bar1 = document.querySelector(".bar-1");
+                                var bar2 = document.querySelector(".bar-2");
+                                var bar3 = document.querySelector(".bar-3");
+                        
+                                bar1.classList.toggle("arrow-1");
+                                bar2.classList.toggle("arrow-2");
+                                bar3.classList.toggle("arrow-3");
+                            }
+                        </script>
+                    </div> <!-- leftmenu -->
+
+                    <div class="rightmenu">
+                        <div class="menu-icon">
+                            <div class="search-bar">
+                                <input type="text" class="search-input" placeholder="검색어를 입력해주세요.">
+                                <a href="#">
+                                    <img src="./image/icon/free-icon-font-search-3917061.png" alt="search">
+                                </a>
+                            </div> <!-- search-bar -->
+
+                            <div class="user-icon">
+                                <a href="#"><img src="./image/icon/free-icon-font-user-3917705.png" alt="user"></a>
+                            </div><!-- login-icon -->
+
+                            <div class="sopping-icon">
+                                <a href="#"><img src="./image/icon/free-icon-font-shopping-cart-3916630.png" alt="sopping"></a>
+                            </div>
+                        </div><!-- menu-icon -->
+                    </div><!-- right-menu -->
+                </div><!-- flex-container -->
+            </div><!-- wrapper -->
+        </div>
+
+        <div class="logo-mainmenu">
+            <div class="wrapper">
+                <div class="flex-container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./image/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="mainmenu">
+                        <ul class="gnb">
+                            <li>
+                                <a href="#">국내여행</a>
+                                <ul class="submenu">
+                                    <li><a href="#">서울</a></li>
+                                    <li><a href="#">부산</a></li>
+                                    <li><a href="#">제주도</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">해외여행</a>
+                                <ul class="submenu">
+                                    <li><a href="#">미국</a></li>
+                                    <li><a href="#">영국</a></li>
+                                    <li><a href="#">일본</a></li>
+                                    <li><a href="#">프랑스</a></li>
+                                    <li><a href="#">이탈리아</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">항공</a>
+                                <ul class="submenu">
+                                    <li><a href="#">대한항공</a></li>
+                                    <li><a href="#">아시아나항공</a></li>
+                                    <li><a href="#">싱가포르항공</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">호텔</a>
+                                <ul class="submenu">
+                                    <li><a href="#">호텔</a></li>
+                                    <li><a href="#">게스트하우스</a></li>
+                                    <li><a href="#">리조트</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">투어</a>
+                                <ul class="submenu">
+                                    <li><a href="#">도시투어</a></li>
+                                    <li><a href="#">자연투어</a></li>
+                                    <li><a href="#">맛집투어</a></li>
+                                    <li><a href="#">레포츠투어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">테마여행</a>
+                                <ul class="submenu">
+                                    <li><a href="#">역사여행</a></li>
+                                    <li><a href="#">컬쳐여행</a></li>
+                                    <li><a href="#">레포츠여행</a></li>
+                                    <li><a href="#">허니문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- mainmenu -->
+                </div><!-- flex-container -->
+            </div><!-- wrapper -->
+        </div><!-- logo-mainmenu -->
+    </header>
+
+    <main>
+        <div class="slide-buy-container">
+            <article class="slide">
+                <h2>slide img</h2>
+                <div class="wrapper">
+                    <input type="radio" name="slide-switch" id="slide1" autocomplete="off" checked>
+                    <input type="radio" name="slide-switch" id="slide2" autocomplete="off">
+                    <input type="radio" name="slide-switch" id="slide3" autocomplete="off">
+                    <ul>
+                        <li>
+                            <img src="./image/slide/s1.jpg" alt="slide">
+                        </li>
+                        <li>
+                            <img src="./image/slide/s2.jpg" alt="slide">
+                        </li>
+                        <li>
+                            <img src="./image/slide/s3.jpg" alt="slide">
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            
+            <script>
+                let slideIndex = 0;
+                let isPaused = false;
+                let interval;
+            
+                window.onload = function () {
+                    const slideCount = document.querySelectorAll('input[name="slide-switch"]').length;
+                    const slideImages = document.querySelectorAll('.slide li img');
+                    interval = setInterval(nextSlide, 3000);
+                    
+                    slideImages.forEach(function(slideImage) {
+                        slideImage.addEventListener("mouseenter", pauseSlide);
+                        slideImage.addEventListener("mouseleave", resumeSlide);
+                    });
+                };
+            
+                function pauseSlide() {
+                    isPaused = true;
+                }
+            
+                function resumeSlide() {
+                    isPaused = false;
+                }
+            
+                function nextSlide() {
+                    if (isPaused) return;
+                    slideIndex = (slideIndex + 1) % document.querySelectorAll('input[name="slide-switch"]').length;
+                    document.querySelectorAll('input[name="slide-switch"]')[slideIndex].checked = true;
+                }
+            </script>
+            
+            <div class="buy">
+                <div class="wrapper">
+                    <div class="buy-container">
+                        <form method="post" name="travel-plan">
+                            <div class="form-row">
+                                <fieldset>
+                                    <legend>여행지 선택</legend>
+                                    <div class="radio-group">
+                                        <input type="radio" id="roundtrip" name="travel-option">
+                                        <label for="roundtrip">왕복 여행</label>
+                                    </div>
+            
+                                    <div class="radio-group">
+                                        <input type="radio" id="oneway" name="travel-option">
+                                        <label for="oneway">편도 여행</label>
+                                    </div>
+                                </fieldset>
+    
+                                <fieldset class="destination-date">
+                                    <legend class="hidden-legend">출,도착지</legend>
+                                    <div class="form-group">
+                                        <label for="departure-country">출발지</label>
+                                        <select id="departure-country" name="departure-country">
+                                            <option value="kor">대한민국</option>
+                                            <option value="usa">미국</option>
+                                            <option value="jpn">일본</option>
+                                            <option value="chn">중국</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="arrival-country">도착지</label>
+                                        <select id="arrival-country" name="arrival-country">
+                                            <option value="kor">대한민국</option>
+                                            <option value="usa">미국</option>
+                                            <option value="jpn">일본</option>
+                                            <option value="chn">중국</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+    
+                                <fieldset class="departure-return">
+                                    <legend class="hidden-legend">날짜 선택</legend>
+                                    <div class="form-group">
+                                        <label for="depart-date">출발 날짜</label>
+                                        <input type="date" id="depart-date" name="depart-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="return-date">귀국 날짜</label>
+                                        <input type="date" id="return-date" name="return-date">
+                                    </div>
+                                </fieldset>
+                            
+                                <fieldset class="people-info">
+                                    <legend>인원 정보</legend>
+                                    <div class="form-group">
+                                        <label for="adults">성인</label>
+                                        <select id="adults" name="adults">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="children">어린이</label>
+                                        <select id="children" name="children">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="animal">동물</label>
+                                        <select id="animal" name="animal">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>
+                        <div class="button-reservation">
+                            <button type="submit" form="travel-plan">예약하기</button>
+                        </div>
+                    </div><!-- buy-container -->
+                </div><!-- wrapper -->
+            </div><!-- buy -->
+        </div>
+        
+        <section class="best">
+            <div class="wrapper">
+                <h3>실시간 베스트</h3>
+                    <div class="best-item">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best1.jpg" alt="bestimg">
+                                    </div>
+                                    <h4>
+                                        동유럽 3국 8~10일
+                                        <span class="sub-title">#베스트셀러</span>
+                                    </h4>
+                                    <p>
+                                        #전일정 4성호텔+프라하 시내호텔<br>
+                                        #빈 2대 궁전투어<br>
+                                        #빈,프라하 자유시간
+                                    </p>
+                                    <p>
+                                        3,490,000<small>원~</small>
+                                    </p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best2.jpg" alt="bestimg">       
+                                    </div>
+                                    <h4>
+                                        오사카 3,4일 
+                                        <span class="sub-title">#특가추천 #실속여행</span>
+                                    </h4>
+                                    <p>
+                                        #가성비 추천 특가 모음<br>
+                                        #1일 자유 or 유니버셜스튜디오<br>
+                                        #도톤보리&신사이바시 쇼핑
+                                    </p>
+                                    <p>
+                                        499,000원~
+                                    </p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best3.jpg" alt="bestimg">
+                                    </div>
+                                    <h4>
+                                        괌 4,5일 <span class="sub-title">#두짓타니 #투몬 시내중심</span>
+                                    </h4>
+                                    <p>
+                                        #쇼핑+바다+수영장 다 갖춘 종합세트<br>
+                                        #고급진 객실에서 즐기는 호캉스<br>
+                                        #쇼핑몰로 바로 이어지는 편리한 위치
+                                    </p>
+                                    <p>
+                                        1,236,000원~
+                                    </p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best4.jpg" alt="bestimg">
+                                    </div>
+                                    <h4>
+                                        서유럽 4국 9,10일 <span class="sub-title">#전일정 4성호텔 이상</span>
+                                    </h4>
+                                    <p>
+                                        #시내호텔 1박이상 숙박<br>
+                                        #에펠탑 전망대 & 세느강 유람선<br>
+                                        #로마 벤츠 밴 투어
+                                    </p>
+                                    <p>
+                                        4,690,000원~
+                                    </p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best5.jpg" alt="bestimg">
+                                    </div>
+                                    <h4>
+                                        미동부/캐나다 9~10일 <span class="sub-title">#가성비</span>
+                                    </h4>
+                                    <p>
+                                        #원월드 전망대<br>
+                                        #나이아가라 크루즈<br>
+                                        #우드버리 아울렛
+                                    </p>
+                                    <p>
+                                        4,299,900원~
+                                    </p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <div class="best-img-container">
+                                        <img src="./image/best/best6.jpg" alt="bestimg">
+                                    </div>
+                                    <h4>
+                                        제주 3일 <span class="sub-title">#스테디셀러</span>
+                                    </h4>
+                                    <p>
+                                        #우도관광<br>
+                                        #현지특식<br>
+                                        #노쇼핑, 노팁, 노옵션
+                                    </p>
+                                    <p>
+                                        3,490,000원~
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- best-item -->
+
+                    <div class="button-reservation">
+                        <button type="submit" form="travel-plan">View more →</button>
+                    </div>
+            </div><!--wrapper-->
+            </section>
+
+            <section class="thema">
+                <div class="wrapper">
+                    <h3>테마별 여행지</h3>
+                    <div class="thema-info">
+                        <ul>
+                            <li>
+                                <div class="thema-img-box">
+                                    <a href="#">
+                                        <img src="./image/thema/2.jpg" alt="thema-img">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thema-img-box">
+                                    <a href="#">
+                                        <img src="./image/thema/5.jpg" alt="thema-img">
+                                    </a>
+                                </div>
+                            <li>
+                                <div class="thema-img-box">
+                                    <a href="#">
+                                        <img src="./image/thema/3.jpg" alt="thema-img">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="thema-img-box">
+                                    <a href="#">
+                                        <img src="./image/thema/4.jpg" alt="thema-img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!--thema-info-->
+                </div><!--wrapper-->
+            </section>
+
+            <section class="accommodation">
+                <div class="wrapper">
+                    <h3>실시간 인기 숙소</h3>
+                    <div class="waikiki">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./image/accommodation/1.jpg" alt="main" class="mainimg">
+                                </a>
+                            </li>
+
+                            <li>
+                                <ul class="sub-img">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./image/accommodation/1.1.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/2.2.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/1.3.jpg" alt="sub">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4>하얏트 리젠시 와이키키 비치 리조트&스파</h4>
+                                <p class="p1">
+                                    HYATT REGENCY WAIKIKI BEACH RESORT AND SPA
+                                </p>
+                                <p class="p2">
+                                    #MD추천 #스페셜 베네핏 #와이키키 부근<br>
+                                    <span class="p2-sub">#4성급</span>
+                                </p>
+                                <div class="p3-container">
+                                    <div class="p3-content">
+                                        <p class="p3">
+                                            1박 요금 최저가<br>
+                                        </p>
+                                        <p class="p3-sub">
+                                            객실 세금/봉사료 포함
+                                        </p>
+                                    </div>
+                                    <p class="p4">
+                                        329,000원~
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!--waikiki-->
+
+                    <div class="mozart">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./image/accommodation/2.jpg" alt="main" class="mainimg">
+                                </a>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./image/accommodation/2.1.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/2.2.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/2.3.jpg" alt="sub">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>더 모차르트 프라그</h4>
+                                <p class="p1">
+                                    The Mozart Prague
+                                </p>
+                                <p class="p2">
+                                    체코 #그레빈 뮤지엄 부근#<br>
+                                    #5성급
+                                </p>
+                                <div class="p3-container">
+                                    <p class="p4">
+                                        ~418,000원
+                                    </p>
+                                    <div class="p3-content">
+                                        <p class="p3">
+                                            1박 요금 최저가<br>
+                                        </p>
+                                        <p class="p3-sub">
+                                            객실 세금/봉사료 포함
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div> <!--mozart-->
+
+                    <div class="Noboribetsu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./image/accommodation/3.jpg" alt="main" class="mainimg">
+                                </a>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./image/accommodation/3.1.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/3.2.jpg" alt="sub">
+                                        </a>
+
+                                        <a href="#">
+                                            <img src="./image/accommodation/3.3.jpg" alt="sub">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4>노보리베츠 세키스이테이</h4>
+                                <p class="p1">
+                                    Noboribetsu Sekisuitei
+                                </p>
+                                <p class="p2">
+                                    #인기료칸 #스페셜 베네핏 #노보리베츠 위피<br>
+                                    #3성급
+                                </p>
+                                <div class="p3-container">
+                                    <div class="p3-content">
+                                        <p class="p3">
+                                            1박 요금 최저가<br>
+                                        </p>
+                                        <p class="p3-sub">
+                                            객실 세금/봉사료 포함
+                                        </p>
+                                    </div>
+                                    <p class="p4">
+                                        260,700원~
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!--Noboribetsu-->
+
+                    <div class="button-reservation">
+                        <button type="submit" form="travel-plan">View more →</button>
+                    </div>
+                </div><!--wrapper-->
+            </section>
+
+            <section class="package">
+            </section><!--package-->
+            
+            <section class="ticket">
+                <div class="wrapper">
+                    <h3>입장권</h3>
+                    <ul class="grid-container">
+                        <li>
+                            <a href="#">
+                                <img src="./image/ticket/ticket1.jpg" alt="ticket1">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./image/ticket/ticket2.jpg" alt="ticket2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./image/ticket/ticket3.jpg" alt="ticket3">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section><!--ticket-->
+
+            <section class="banner">
+                <div class="wrapper">
+                    <a href="#">
+                        <img src="./image/banner.jpg" alt="banner">
+                    </a>
+                </div>
+            </section><!--banner-->
+    </main>
+
+    <button id="back-to-top" class="side-button" title="Back to Top">
+        <img src="./image/icon/free-icon-font-arrow-up-3916857.png" alt="Up Arrow Icon" />
+    </button>
+    
+    <button id="contact-us" class="side-button" title="Contact Us">
+        <img src="./image/icon/free-icon-font-headphones-3917664.png" alt="Contact Icon" />
+    </button>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const backToTopButton = document.querySelector("#back-to-top");
+        const contactUsButton = document.querySelector("#contact-us");
+        const contactSection = document.querySelector("#contact-section");
+    
+        function toggleVisibilityOnScroll(elements, yOffset) {
+            window.addEventListener("scroll", () => {
+                for (const element of elements) {
+                    if (window.scrollY > yOffset) {
+                        element.style.display = "inline-flex";
+                    } else {
+                        element.style.display = "none";
+                    }
+                }
+            });
+        }
+    
+        toggleVisibilityOnScroll([backToTopButton, contactUsButton], 100);
+    
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    
+        contactUsButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: contactSection.offsetTop,
+                behavior: "smooth",
+            });
+        });
+    });
+    </script>
+
+    <footer>
+        <div class="footer-menu">
+            <div class="wrapper">
+                <div class="foot-menu-flexbox">
+                    <nav class="foot-menu">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">여행약관</a></li>
+                            <li><a href="#">해외여행자보험</a></li>
+                            <li><a href="#">마케팅제휴</a></li>
+                            <li><a href="#">여행플래너</a></li>
+                        </ul>
+                    </nav>
+                </div><!--info-menu-flexbox-->
+            </div><!--wrapper-->
+        </div><!--footer-menu-->
+
+        <div class="logo-info-sns">
+            <div class="wrapper">
+                <div class="logo-info-sns-flexbox">
+                    <div class="footer-logo">
+                        <h2>
+                            <img src="./image/logo.jpg" alt="footerlogo">
+                        </h2>
+                    </div><!--footer-logo-->
+
+                    <div class="info">
+                        <p class="business-info">
+                            주)SW투어네트워크 대표이사 : 김석원<br>
+                            사업자등록번호 : 202-81-452 통신판매업신고번호 : 중구 제 1234호 
+                            호스팅 업체 : (주)SW투어네트워크 <a href="#" class="info-check">사업자정보확인 ▶</a><br>
+                            관광사업자 등록번호 : 1995-10(서울특별시 중구) 영업여행업보증 : 10억 기획여행업보증 : 5억원
+                        </p>
+                        <address>
+                            상담문의 : 1544-1544
+                            FAX : 02-2023-0711
+                            주소 : 서울특별시 도봉구 도봉로 169<br>
+                        </address>
+                        <p>
+                            ※ 부득이한 사정에 의해 확정된 여행일정이 변경되는 경우 여행자의 사전 동의를 받습니다.<br>
+                            ※ (주)SW투어는 항공사가 제공하는 개별 항공권 및 여행사가 제공하는 일부 여행상품에 대하여 통신판매중개자의 지위를 가지며,<br>해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.
+                        </p>
+                        <p class="copyright">
+                            COPYRIGHTSⓒ2023 (주)SWTOUR ALL RIGHT RESERVED.
+                        </p>
+                    </div><!--info-->
+
+                    <div class="sns">
+                        <a href="#">
+                            <img src="./image/sns/facebook.jpg" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="./image/sns/blog.jpg" alt="blog">
+                        </a>
+                        <a href="#">
+                            <img src="./image/sns/insta.jpg" alt="insta">
+                        </a>
+                        <a href="#">
+                            <img src="./image/sns/kakao.jpg" alt="kakao">
+                        </a>
+                        <a href="#">
+                            <img src="./image/sns/ytube.jpg" alt="ytube">
+                        </a>
+                        <a href="#">
+                            <img src="./image/sns/page.jpg" alt="page">
+                        </a>
+                    </div> <!--sns-->
+                </div><!--logo-info-sns-flexbox-->
+            </div><!--wrapper-->
+        </div><!--logo-info-sns-->
+    </footer>
+</body>
+</html>
