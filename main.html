@@ -85,11 +85,11 @@
                             <strong>오늘의 운영시간</strong>
                             <div class="today-info">
                                 <p id="today">오늘 날짜</p>
-                                <span class="time">10:00 - 20:00</span>
+                                <p class="time">10:00 - 20:00</p>
                                 <div class="schedule">
                                     <ul>
                                         <li>12:20 레니의 대모험~ 드래곤 성을 찾아서</li>
-                                        <li>13:00 해피 떙스 기빙 파티</li>
+                                        <li>13:00 해피 땡스 기빙 파티</li>
                                         <li>14:30 슈퍼우잉스 애니멀 톡</li>
                                         <li>15:00 카니발 판타지 퍼레이드</li>
                                         <li>17:00 해피 땡스 기빙 파티</li>
@@ -98,8 +98,10 @@
                                         <li>20:30 문라이트 퍼레이드</li>
                                         <li>21:30 EVERTOPIA - The Origin of Everland</li>
                                     </ul>
-                                    <button><a href="#">공연정보 더보기</a></button>
-                                    <button><a href="#">어트랙션 운휴안내</a></button>
+                                    <div class="btn">
+                                        <button><a href="#">공연정보 더보기</a></button>
+                                        <button><a href="#">어트랙션 운휴안내</a></button>
+                                    </div>
                                 </div><!--schedule-->
                             </div><!--today-list-->
                         </div><!--today-->
@@ -126,9 +128,14 @@
                                 </li>
                             </ul>
                             <aside class="user-guide">
-                                <div class="bus-img"><img src="./images/bus.png" alt="bus"></div>
-                                <div class="txt-content">
-                                    <a href="#"><em>우리집에서 에버랜드까지</em><strong><span>대중교통ㆍ자가용</span> 이용방법</strong></a>
+                                <div id="guide-link">
+                                    <div class="flex-box">
+                                        <div class="bus"><img src="./images/bus.png" alt="bus"></div>
+                                        <div class="txt-content">
+                                            <q>우리집에서 에버랜드까지</q>
+                                            <strong><span class="traffic">대중교통ㆍ자가용</span> 이용방법</strong>
+                                        </div>
+                                    </div>
                                 </div>
                             </aside>
                         </div>

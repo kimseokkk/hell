@@ -5,194 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="조원태">
     <meta name="description" content="고객센터">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/customercenter.css">
     <title>고객상담센터</title>
 </head>
 <style>
 </style>
 <body>
     <header>
+        <div class="search-logo-login">
+            <div class="wrapper">
+                <div class="flex-box">
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="검색어를 입력해주세요.">
+                        <a href="#">
+                            <img src="./images/icon/free-icon-font-search-3917061.png" alt="search" class="search-icon">
+                        </a>
+                    </div><!--left-search-->
 
+                    <div class="headlogo">
+                        <a href="#">
+                            <img src="./images/headlogo.png" alt="logo" class="logo-img">
+                        </a>
+                    </div><!--healogo-->
+
+                    <div class="login">
+                        <ul>
+                            <li><a href="#" class="login-link">로그인</a></li>
+                            <li><a href="#" class="signup-link">회원가입</a></li>
+                            <li><a href="#" class="center-link">상담센터</a></li>
+                        </ul>
+                    </div>
+                </div><!--flex-box-->
+
+                <div class="mainmenu">
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="#">이용정보</a></li>
+                            <li><a href="#">식당</a></li>
+                            <li><a href="#">엔터테이먼트</a></li>
+                            <li><a href="#">어트랙션</a></li>
+                            <li><a href="#">동식물원</a></li>
+                            <li><a href="#">굿즈샵</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div><!--search-logo-login-->
     </header>
 
     <main>
         <section class="customer-center">
             <div class="wrapper">
-                <div class="flex box">
-                    <aside>
-                        <h2>서브 리스트</h2>
-                        <ul class="sub-list">
-                            <li>
-                                <strong>카테고리로 검색하기</strong>
-                            </li>
-                            <li>
-                                <a href="#">홈페이지/비밀번호</a>
-                            </li>
-                            <li>
-                                <a href="#">모바일 기프트카드</a>
-                            </li>
-                            <li>
-                                <a href="#">동물원/사육사</a>
-                            </li>
-                            <li>
-                                <a href="#">종합이용안내</a>
-                            </li>
-                            <li>
-                                <a href="#">스마트예약</a>
-                            </li>
+                <aside>
+                    <ul class="sub-list">
+                        <li>
+                            <h2>카테고리로 검색하기</h2>
+                        </li>
+                        <li>
+                            <a href="#">홈페이지/비밀번호</a>
+                        </li>
+                        <li>
+                            <a href="#">모바일 기프트카드</a>
+                        </li>
+                        <li>
+                            <a href="#">동물원/사육사</a>
+                        </li>
+                        <li>
+                            <a href="#">종합이용안내</a>
+                        </li>
+                        <li>
+                            <a href="#">스마트예약</a>
+                        </li>
+                    </ul>
+                </aside>
+                <section class="content-box">
+                    <div class="search-info">
+                        <div class="title">
+                            <h2>상담센터</h2>
+                            <p>자주 찾는 질문으로 <br>궁굼한 점을 찾아보세요!</p>
+                            <strong>자세한 문의 사항은 아래를 클릭해주세요</strong>
+                            <button><a href="">문의 사항 보내기</a></button>
+                        </div>
+                        <div class="search">
+                            <form action="#" id="search">
+                                <input id="search-box" type="search" placeholder="키워드를 입력해주세요" >
+                                <button id="search-button">검색</button> 
+                            </form>
+                        </div>
+                        <div class="info-txt">
+                            <ul>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]신규 가입시 본인 인증은 필수인가요?</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>네. 본인 명의 휴대폰으로 인증이 필요합니다</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]본인 인증을 진행했더니, 이미 본인 인증된 회원이 있다고 해요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>동일한 명의의 아이디가 존재하고 있습니다.
+                                            아이디/비밀번호 찾기를 이용해 주세요.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]카카오 로그인 연동은 어디서 어떻게 하나요?</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>마이페이지에서 가능합니다.
+                                            본인인증 완료된 ID만 연동 가능하며, 기존 가입한 카카오ID가 없어야 합니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]페이스북 로그인을 연동하고 싶어요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>페이스북 로그인 연동은 지원하지 않습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]기존에 쓰던 아이디가 있는데, 다른 ID로 본인인증을 해버렸어요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>본인인증은 한 ID만 가능합니다.
+                                            인증한 ID 탈퇴 후 재가입 및 본인인증을 진행해주세요.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]쿠폰이나 메일 인쇄가 제대로 안 돼요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>쿠폰임이 식별 가능할 정도라면 어떻게 인쇄되어도 상관 없으니 인쇄된 그대로 사용하십시오.(흑백도 가능)
+                                            그리고 바코드가 인쇄되지 않아도 상관 없습니다만 아래와 같이 설정을 변경하면 정상적으로 인쇄가 됩니다.
+                                            - 인터넷창 상단의 "도구" > "인터넷 옵션" > "고급" > "인쇄" > "배경 및 이미지 인쇄" 체크</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]예약 및 결제 완료 후 지불 실패 메시지가 떠요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>
+                                            아래의 사유로 인해 지불 실패된 경우에 뜨는 메시지입니다.
+                                        </p>
+                                        <ol>
+                                            <li>카드 사용한도 초과</li>
+                                            <li>카드 사용 조건이 올바르지 않음 (전월 실적 부족 등)</li>
+                                            <li>기타 결제 조건에 맞지 않는 카드</li>
+                                        </ol>
+                                        <p>
+                                            지불 실패에 대한 내용은 개인금융정보 보호로 인하여 에버랜드에서는 조회할 수 없으니<br>
+                                            각 카드사 고객센터로 해 주시기 바랍니다. <br>
+                                            삼성카드 : 1588-8700   BC 카드 : 1588-4000   외환카드: 1588-3200   KB국민카드 : 1588-1688 <br>
+                                            신한카드 : 1544-7000   현대카드 : 1577-6000   하나SK카드 : 1599-1155
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]메일 수신 동의를 했는데도 메일이 안 와요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>
+                                            일부 메일 계정이나 사내 메일은 방화벽 등의 이유로 메일 수신이 불가한 경우가 있습니다. <br><br>
+                                            네이버, 한메일, 네이트 등으로 이메일주소를 변경하기를 권해 드립니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]홈페이지 회원을 위한 생일 우대 혜택이 있나요? (생일 축하 우대 쿠폰)</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>
+                                            홈페이지 회원에 가입하면 생일 일주일 전에 에버랜드 우대 쿠폰을 이메일로 보내 드립니다. <br>
+                                            쿠폰 1매당 본인 포함 4인까지 사용 가능하며 제휴카드 등 다른 혜택과 중복 적용되지 않습니다. <br>
+                                            - 쿠폰 유효기간 : 생일 일주일 전 ~ 생일 열흘 후 (쿠폰에 날짜 기재) <br>
+                                            - 사용 방법 : 생일자 신분증과 함께 매표소에 제시 <br>
+                                            - 유의 사항
+                                        </p>
+                                        <ul style="list-style-type: disc">
+                                            <li>① 회원 가입 시 정확한 이메일 주소를 기입해 주십시오.</li> 
+                                            <li>② 손님의 부주의로 인한 미수신 및 분실 시 재발송해 드리지 않습니다.</li> 
+                                            <li>③ 생일 일주일 전 이후에 가입한 경우, 금년도 쿠폰은 받을 수 없습니다.</li> 
+                                            <li>④ 최소 생일 이주일 전에는 회원가입하여야 생일 쿠폰이 정상적으로 발송됩니다.</li> 
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="question">
+                                        <p>[홈페이지/비밀번호]개인 정보가 도용된 것 같아요.</p>
+                                    </div>
+                                    <div class="answer">
+                                        <p>
+                                            개인정보 도용의 경우 본인 외에는 고발 등의 조치를 취할 수가 없어
+                                            사이버수사대 개인정보침해신고센터에 의뢰할 것을 제안 드립니다.
+                                            원하시면 손님의 정보를 도용한 회원이 가입할 때 기입한 개인 정보를 알려 드릴 수 있으나
+                                            대부분 그 정보 역시 조작된 경우가 많습니다.
+                                            - 국번 없이 1336, <a href="http://www.1336.or.kr">http://www.1336.or.kr</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!--info-txt-->
+                        <ul class="list-button">
+                            <li><button><a href="">다음</a></button></li>
+                            <li><button><a href="">1</a></button></li>
+                            <li><button><a href="">2</a></button></li>
+                            <li><button><a href="">3</a></button></li>
+                            <li><button><a href="">4</a></button></li>
+                            <li><button><a href="">5</a></button></li>
+                            <li><button><a href="">이전</a></button></li>
                         </ul>
-                    </aside>
-                    <div class="content-box">
-                        <div class="search-info">
-                            <div class="title">
-                                <h2>상담센터</h2>
-                                <p>자주 찾는 질문으로 궁굼한 점을 찾아보세요</p>
-                                <strong>자세한 문의 사항은 아래를 클릭해주세요</strong>
-                                <button>문의 사항 보내기</button>
-                            </div>
-                            <div class="search">
-                                <form action="#" id="search">
-                                    <input id="search-box" type="search" placeholder="키워드를 입력해주세요" >
-                                    <button id="search-button">검색</button> 
-                                </form>
-                            </div>
-                            <div class="info-txt">
-                                <ul>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]신규 가입시 본인 인증은 필수인가요?</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>네. 본인 명의 휴대폰으로 인증이 필요합니다</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]본인 인증을 진행했더니, 이미 본인 인증된 회원이 있다고 해요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>동일한 명의의 아이디가 존재하고 있습니다.
-                                                아이디/비밀번호 찾기를 이용해 주세요.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]카카오 로그인 연동은 어디서 어떻게 하나요?</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>마이페이지에서 가능합니다.
-                                                본인인증 완료된 ID만 연동 가능하며, 기존 가입한 카카오ID가 없어야 합니다.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]페이스북 로그인을 연동하고 싶어요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>페이스북 로그인 연동은 지원하지 않습니다.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]기존에 쓰던 아이디가 있는데, 다른 ID로 본인인증을 해버렸어요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>본인인증은 한 ID만 가능합니다.
-                                                인증한 ID 탈퇴 후 재가입 및 본인인증을 진행해주세요.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]쿠폰이나 메일 인쇄가 제대로 안 돼요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>쿠폰임이 식별 가능할 정도라면 어떻게 인쇄되어도 상관 없으니 인쇄된 그대로 사용하십시오.(흑백도 가능)
-                                                그리고 바코드가 인쇄되지 않아도 상관 없습니다만 아래와 같이 설정을 변경하면 정상적으로 인쇄가 됩니다.
-                                                - 인터넷창 상단의 "도구" > "인터넷 옵션" > "고급" > "인쇄" > "배경 및 이미지 인쇄" 체크</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]예약 및 결제 완료 후 지불 실패 메시지가 떠요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>
-                                                아래의 사유로 인해 지불 실패된 경우에 뜨는 메시지입니다.
-                                            </p>
-                                            <ol>
-                                                <li>카드 사용한도 초과</li>
-                                                <li>카드 사용 조건이 올바르지 않음 (전월 실적 부족 등)</li>
-                                                <li>기타 결제 조건에 맞지 않는 카드</li>
-                                            </ol>
-                                            <p>
-                                                지불 실패에 대한 내용은 개인금융정보 보호로 인하여 에버랜드에서는 조회할 수 없으니<br>
-                                                각 카드사 고객센터로 해 주시기 바랍니다. <br>
-                                                삼성카드 : 1588-8700   BC 카드 : 1588-4000   외환카드: 1588-3200   KB국민카드 : 1588-1688 <br>
-                                                신한카드 : 1544-7000   현대카드 : 1577-6000   하나SK카드 : 1599-1155
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]메일 수신 동의를 했는데도 메일이 안 와요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>
-                                                일부 메일 계정이나 사내 메일은 방화벽 등의 이유로 메일 수신이 불가한 경우가 있습니다. <br><br>
-                                                네이버, 한메일, 네이트 등으로 이메일주소를 변경하기를 권해 드립니다.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]홈페이지 회원을 위한 생일 우대 혜택이 있나요? (생일 축하 우대 쿠폰)</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>
-                                                홈페이지 회원에 가입하면 생일 일주일 전에 에버랜드 우대 쿠폰을 이메일로 보내 드립니다. <br>
-                                                쿠폰 1매당 본인 포함 4인까지 사용 가능하며 제휴카드 등 다른 혜택과 중복 적용되지 않습니다. <br>
-                                                - 쿠폰 유효기간 : 생일 일주일 전 ~ 생일 열흘 후 (쿠폰에 날짜 기재) <br>
-                                                - 사용 방법 : 생일자 신분증과 함께 매표소에 제시 <br>
-                                                - 유의 사항
-                                            </p>
-                                            <ul style="list-style-type: disc">
-                                                <li>① 회원 가입 시 정확한 이메일 주소를 기입해 주십시오.</li> 
-                                                <li>② 손님의 부주의로 인한 미수신 및 분실 시 재발송해 드리지 않습니다.</li> 
-                                                <li>③ 생일 일주일 전 이후에 가입한 경우, 금년도 쿠폰은 받을 수 없습니다.</li> 
-                                                <li>④ 최소 생일 이주일 전에는 회원가입하여야 생일 쿠폰이 정상적으로 발송됩니다.</li> 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="question">
-                                            <p>[홈페이지/비밀번호]개인 정보가 도용된 것 같아요.</p>
-                                        </div>
-                                        <div class="answer">
-                                            <p>
-                                                개인정보 도용의 경우 본인 외에는 고발 등의 조치를 취할 수가 없어
-                                                사이버수사대 개인정보침해신고센터에 의뢰할 것을 제안 드립니다.
-                                                원하시면 손님의 정보를 도용한 회원이 가입할 때 기입한 개인 정보를 알려 드릴 수 있으나
-                                                대부분 그 정보 역시 조작된 경우가 많습니다.
-                                                - 국번 없이 1336, <a href="http://www.1336.or.kr">http://www.1336.or.kr</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div><!--info-txt-->
-                            <div class="list button">
-                                <div class="flexbox">
-                                    <div><button><a href="">1</a></button></div>
-                                    <div><button><a href="">2</a></button></div>
-                                    <div><button><a href="">3</a></button></div>
-                                    <div><button><a href="">4</a></button></div>
-                                    <div><button><a href="">5</a></button></div>
-                                </div>
-                            </div>
-                        </div><!--search-info-->
-                    </div><!--content box-->
-                </div><!--flex-box-->
+                    </div><!--search-info-->
+                </section><!--content box-->
             </div><!--wrapper-->
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-menu">
+            <div class="wrapper">
+                <div class="foot-sns-flexbox">
+                    <nav class="sns">
+                        <ul>
+                            <li><a href="#"><img src="./images/sns/로고트위터.png" alt="twit"></a></li>
+                            <li><a href="#"><img src="./images/sns/youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="./images/sns/Facebook.png" alt="Facebook"></a></li>
+                            <li><a href="#"><img src="./images/sns/Instagram.png" alt="Instagram"></a></li>
+                            <li><a href="#"><img src="./images/sns/naver blog.png" alt="blog"></a></li>
+                            <li><a href="#"><img src="./images/sns/kakaotalk.png" alt="kakao"></a></li>
+                        </ul>
+                    </nav>
+                </div><!--info-menu-flexbox-->
+            </div><!--wrapper-->
+        </div><!--footer-menu-->
+
+        <div class="logo-info-sns">
+            <div class="wrapper">
+                <div class="logo-info-flexbox">
+                    <div class="footer-logo">
+                        <h2>
+                            <img src="./images/캡처 7.png">
+                        </h2>
+                    </div><!--footer-logo-->
+
+                    <div class="info">
+                        <p class="business-info">
+                            경기도 용인시 처인구 포곡읍 에버랜드로 199 삼성물산(주)<br>
+                            대표이사 : 정해린 | 사업자등록번호 : 135-85-04288 | 통신판매업 신고번호 : 제2006-용인처인-0216호<a href="#" class="info-check">사업자정보확인 ▶</a>
+                        <address>
+                            손님상담센터 : 031-320-5000(유료)
+                        </address>
+                        <p class="copyright">
+                            Copyright © Samsung C&T Corporation. All rights reserved.
+                        </p>
+                    </div><!--info-->
+                </div><!--logo-info-sns-flexbox-->
+            </div><!--wrapper-->
+        </div><!--logo-info-sns-->
+    </footer>
 </body>
 </html>
