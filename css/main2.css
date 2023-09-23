@@ -220,7 +220,7 @@ article img {
 .news-info li {
     padding: 15px 0;
     border-bottom: 1px solid #EBEBEB;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: lighter;
 }
 
@@ -243,15 +243,15 @@ article img {
 }
 
 .schedule > ul {
-    height: 170px;
+    height: 185px;
     background-color: #eee;
     margin: 10px 0;
     overflow-y: scroll;
 }
 
 .schedule li {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
     padding: 10px 10px;
 }
 
