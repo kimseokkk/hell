@@ -128,6 +128,9 @@ header {
 
 /* +===============main================ */
 
+main {
+    margin-bottom: 200px;
+}
 
 /* title*/
 .title {
@@ -275,11 +278,10 @@ h2 > span:last-child {
 
 footer {
     width: 100%;
-    background-color: #fff;
+    padding-bottom: 20px;
 }
 
 .footer-menu {
-    margin-top: 170px;
     border-top: 1px solid #867d80;
     border-bottom: 1px solid #867d80;
 }
@@ -316,6 +318,7 @@ footer {
 }
 .logo-info-flexbox {
     display: flex;
+    padding: 50px 0;
 }
 
 .info {
