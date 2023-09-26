@@ -9,6 +9,10 @@ section {
     height: 100vh;
 }
 
+.visible {
+    visibility: visible;
+}
+
 h2 {
     text-align: left;
     color: #FFF;
@@ -170,22 +174,23 @@ header {
     display: block; 
 }
 
-/* title */
+/* main-title */
 
-.title {
+.main-title {
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
-.title > video {
+.main-title > video {
     width: 100%;
     position: absolute;
     left: 0;
-    top: -100px;
+    top: -20%;
     z-index: 2;
 }
 
-.title > .flex-box{
+.main-title > .flex-box{
     width: 100%;
     opacity: 1;
     position: absolute;
@@ -353,7 +358,7 @@ header {
 
 .attr-info .right  p {
     position: relative;
-    margin-top: 360px;
+    margin-top: 45%;
     color: #FFF;
     font-size: 26px;
     font-weight: 700px;
@@ -365,7 +370,7 @@ header {
 .attr-info .right > p::after {
     content: '';
     position: absolute;
-    left: 0; top: -130px;
+    left: 0; top: -30px;
     width: 100%;
     height: 1px;
     border-top: 1px solid #fff;
@@ -380,12 +385,18 @@ header {
         width: 100%;
         height: 100vh;
         opacity: 1;
+    }
+    
+.zooto-bg > .content-txt {
+    position: relative;
 }
 
-.zooto-bg > .content-txt {
-    padding-top: 30%;
-    padding-left: 5%;
+.zooto-bg > .content-txt > div {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
 }
+
 
 .zooto-bg > .content-txt h2 {
     font-size: 222px;
@@ -477,10 +488,17 @@ header {
 .planto-bg > .content-txt {
     padding-top: 25%;
     padding-left: 45%;
+    position: relative;
 }
 
 .planto-bg > .content-txt h2 {
     font-size: 280px;
+}
+
+.planto-bg .title {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
 }
 
 /* planto-info */
@@ -496,6 +514,8 @@ header {
     display: flex;
     flex-direction: column;
 }
+
+
 
 .planto-info .left p {
     color: #FFF;
@@ -578,8 +598,13 @@ header {
 }
 
 .enter-bg > .content-txt {
-    padding-top: 25%;
-    padding-left: 25%;
+    position: relative;
+}
+
+.enter-bg .title {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
 }
 
 .enter-bg > .content-txt h2 {
