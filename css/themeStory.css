@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 
@@ -196,12 +196,19 @@ h2 > span:last-child {
 /* story */
 
 .story {
+    position: relative;
+    width: 1400px;
     margin-top: 30px;
+    height: 1300px;
+    overflow: hidden;
 }
 
 .story > ul {
-    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
+    transition: 0.3s all ease-in-out;
     /* overflow: hidden; */
 }
 
@@ -241,8 +248,10 @@ h2 > span:last-child {
 .story-info ul {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
     justify-content: space-between;
 }
+
 
 
 .story-info ul > li {
