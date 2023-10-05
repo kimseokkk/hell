@@ -147,7 +147,7 @@ header {
 
 main {
     background: url(../images/배너이미지01_2\ 1.png) no-repeat center;
-    background-size: cover;
+    background-size: 100% 1100px;
     background-position-y: 0;
     padding-bottom: 200px;
 }
@@ -276,7 +276,7 @@ aside {
     padding: 10px 40px;
     border: 2px solid #8a8a8a;
     background: url(../images/icon/free-icon-font-search-3917061.png) no-repeat;
-    background-size: 4%;
+    background-size: 2%;
     background-position-y: center;
     background-position-x: 10px;
     border-radius: 10px;
@@ -290,6 +290,12 @@ aside {
     margin: 0 20px;
     background-color:#77278B;
     border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+}
+
+#search > button:hover {
+    background-color: #a852be;
 }
 
 .info-txt {
@@ -308,17 +314,26 @@ aside {
     cursor: pointer;
 }
 
+
 .answer{
-    background:url(../images/downbtn.png) no-repeat;
-    background-position: 97%;
     background-color: #e6e6e6;
     line-height: 1.2em;
     display: none;
     cursor: pointer;
 }
 
-.answer > p {
-    padding-right: 60px;
+.answer ol> li {
+    margin-bottom: 1.1em;
+    padding-left: 10px;
+    list-style: circle;
+    list-style-position: inside;
+}
+
+.question p,
+.answer p {
+    font-size: 16px;
+    padding-left: 10px;
+    line-height: 1.5em;
 }
 
 .list-button {
@@ -332,7 +347,10 @@ aside {
 .list-button > li > button {
     border-radius: 10px;
     border: 0;
+    
 }
+
+
 
 .list-button > li:first-child > button,
 .list-button > li:last-child > button{
@@ -353,6 +371,10 @@ aside {
     background-color: transparent;
 }
 
+.list-button > li > button:hover {
+    font-weight: bold;
+    background-color: #8a8a8a;
+}
 .list-button > li a{
     padding: 5px 10px;
 }

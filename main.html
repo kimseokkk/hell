@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/wheel.js"></script>
+    <script src="./js/main.js"></script>
+    <title>에버랜드</title>
 </head>
 <body>
-
+    
     <!-- ============header============== -->
     <header>
         <div class="menu-logo-login">
@@ -28,7 +32,7 @@
         </div>
         <div class="right-menu">
             <div class="flex-box">
-                <button><img src="./images/icon/free-icon-font-angle-small-down-10513302.png" alt=""></button>
+                <button id="closeBtn"><img src="./images/icon/free-icon-font-angle-small-down-10513302.png" alt=""></button>
                 <h1><img src="./images/headlogo.png" alt=""></h1>
             </div>
             <nav>
@@ -48,12 +52,12 @@
         </div>
     </header>
 
-
+    
     <!-- ============main============== -->
-
+    
     <main>
-        <section class="main-title visible">
-            <video autoplay muted aria-hidden="true">
+        <section class="main-title">
+            <video muted aria-hidden="true" id="everVideo">
                 <source src="./images/Comp_VP9.webm" type="video/webm">
                 <source src="./images/Comp.mov" type="quicktime">
             </video>
@@ -69,8 +73,8 @@
                 </div>
             </div>
         </section>
-
-<!-- attr-title -->
+        
+        <!-- attr-title -->
         <section class="attr-title">
             <div class="attr-bg">
                 <div class="content-txt">
@@ -81,7 +85,7 @@
                 </div>
             </div>
         </section>
-<!-- attraction-info -->
+        <!-- attraction-info -->
         <section class="attr-info">
             <div class="flex-box">
                 <div class="left">
@@ -143,7 +147,7 @@
             </div>
         </section>
 <!-- planto-title -->
-        <section class="planto-title">
+        <section class="planto-title">  
             <div class="planto-bg">
                 <div class="content-txt">
                     <div class="title">
@@ -153,7 +157,7 @@
                 </div>
             </div>
         </section>
-<!-- planto-info -->
+        <!-- planto-info -->
         <section class="planto-info">
             <div class="flex-box">
                 <div class="left">
@@ -178,7 +182,7 @@
                 </div>
             </div>
         </section>
-<!-- enter-title -->
+        <!-- enter-title -->
         <section class="enter-title">
             <div class="enter-bg">
                 <div class="content-txt">
@@ -189,7 +193,7 @@
                 </div>
             </div>
         </section>
-<!-- enter-info -->
+        <!-- enter-info -->
         <section class="enter-info">
             <strong>엔터테이먼트</strong>
             <h2>ENTERTAIMENT</h2>

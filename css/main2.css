@@ -161,11 +161,6 @@ article > h2 {
     font-size: 0;
 }
 
-article > ul {
-    display: flex;
-    margin: 0 auto;
-}
-
 article > ul > li {
     min-width: 100%;
 }
