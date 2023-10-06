@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{margin:0;padding:0}
+html, body{overflow-y:hidden}
+ul, ol{list-style:none}
+.header{position:fixed;z-index:10;top:0;width:100%}
+.header ul:after{content:"";display:block;clear:both}
+.header ul li{float:left;border-left:1px solid rgba(255, 255, 255, 0);box-sizing:border-box;width:25%}
+.header ul li:first-child{border-left:none}
+.header ul li a{display:block;height:60px;text-align:center;line-height:60px;font-size:20px;text-decoration:none;background-color:#000;color:#fff}
+.header ul li.on a{background-color:#fff;color:#000}
+.content{}
+.content div{position:relative}
+.content div p{position:absolute;top:50%;margin-top:-40px;text-align:center;width:100%;font-size:80px;font-weight:bold;color:#fff}
+.content .cnt01{background-color:#cc6666}
+.content .cnt02{background-color:#9966cc}
+.content .cnt03{background-color:#6699cc}
+.content .cnt04{background-color:#66cc99}
+</style>
+<body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<div class="header">
+    <ul>
+        <li class="on" class="a"><a href="#">NAV01</a></li>
+        <li><a href="#">NAV02</a></li>
+        <li><a href="#">NAV03</a></li>
+        <li><a href="#">NAV04</a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="cnt01"><p>CONTENT01</p></div>
+    <div class="cnt02"><p>CONTENT02</p></div>
+    <div class="cnt03"><p>CONTENT03</p></div>
+    <div class="cnt04"><p>CONTENT04</p></div>
+</div>
+    <script>
+    var scroll = function(){
+        
+        var $nav = null,
+            $cnt = null,
+            moveCnt = null,
+            moveIndex = 0,
+            moveCntTop = 0,
+            winH = 0,
+            time = false; // 새로 만든 변수
+    
+        $(document).ready(function(){
+            init();
+            initEvent();
+        });
+        
+        var init = function(){
+            $cnt = $(".content");
+            $nav = $(".header a");
+        };
+        
+        var initEvent = function(){
+            $("html ,body").scrollTop(0);
+            winResize();
+            $(window).resize(function(){
+                winResize();
+            });
+            $nav.on("click", function(){
+                moveIndex = $(this).parent("li").index();
+                moving(moveIndex);
+                return false;
+            });
+            $cnt.on("mousewheel", function(e){
+                if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
+                wheel(e);
+                }
+            });
+        };
+            
+        var winResize = function(){
+            winH = $(window).height();
+            $cnt.children("div").height(winH);
+            $("html ,body").scrollTop(moveIndex.scrollTop);
+        };
+        
+        var wheel = function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                if(moveIndex < 3){
+                    moveIndex += 1;
+                    moving(moveIndex);
+                };
+            }else{
+                if(moveIndex > 0){
+                    moveIndex -= 1;
+                    moving(moveIndex);
+                };
+            };
+        };
+        
+        var moving = function(index){
+            time = true // 휠 이벤트가 실행 동시에 true로 변경
+            moveCnt = $cnt.children("div").eq(index);
+            moveCntTop = moveCnt.offset().top;
+            $("html ,body").stop().animate({
+                scrollTop: moveCntTop
+            }, 1000, function(){
+            time = false; // 휠 이벤트가 끝나면 false로 변경
+            });
+            $nav.parent("li").eq(index).addClass("on").siblings().removeClass("on");
+        };
+        
+    };
+    
+    scroll();
+    
+    </script>
+</body>
+</html>

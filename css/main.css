@@ -1,9 +1,16 @@
 @charset "utf-8";
 
 body {
-    overflow: hidden;
+    overflow-y: hidden;
     position: relative;
+}
+
+section {
     height: 100vh;
+}
+
+.visible {
+    visibility: visible;
 }
 
 h2 {
@@ -57,7 +64,7 @@ button {
 
 .info {
     height: 100vh;
-} 
+}
 
 
 /* =============header=============== */
@@ -96,7 +103,7 @@ header {
 .right-menu {
     position: absolute;
     z-index: 9999;
-    left: -528px; top:0;
+    left: -100%; top:0;
     width: 528px;
     height: 100vh;
     background-color: #ffffffe5;
@@ -174,40 +181,44 @@ header {
 /* =========main========== */
 
 section {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
+.visible {
+    display: block;
+}
 
 /* main-title */
 
 
 video {
 width: 100%;
-position: fixed;
+position: absolute;
 left: 50%;
-top: 50%;
+top:  50%;
 transform: translate(-50%, -50%);
 z-index: 2;
+opacity: 1;
 }
 
 
 .main-title {
     position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 
 .main-title > .flex-box{
-    transform: translateY(100%);
     width: 100%;
     opacity: 1;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transform: translateY(100%);
+    transition: all 1s ease-out;
 }
 
 .img_box{
@@ -544,7 +555,7 @@ z-index: 2;
 }
 
 .planto-info h2 {
-    z-index: 4;
+    z-index: 0;
     position: relative;
     margin-top: 50px;
     font-size: 235px;
@@ -568,7 +579,7 @@ z-index: 2;
     justify-content: space-between;
 }
 
-.planto-info .right .img-box {
+.planto-info .img-box {
     position: relative;
     height: 100%;
 }
@@ -581,20 +592,20 @@ z-index: 2;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 3;
+    z-index: 0;
 }
 .planto-info .img-box img:nth-child(2) {
     position: absolute;
     left: 400px;
     top: 10%;
-    z-index: 4;
+    z-index: 0;
 }
 
 .planto-info .img-box img:last-child {
     position: absolute;
     left: 800px;
     top: 20%;
-    z-index: 5;
+    z-index: 0;
 }
 
 
@@ -626,8 +637,6 @@ z-index: 2;
 /* enterinfo */
 .enter-info {
     background: #A76F7C;
-    position: relative;
-    height: 100vh;
 } 
 
 .enter-info strong {

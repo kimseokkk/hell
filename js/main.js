@@ -1,12 +1,6 @@
-$(document).ready(function () {
+$(function() {
     let currentSection = 0;
     let totalSections = $("section").length;
-    let wheelCount = 0; // 휠 이벤트 발생 횟수를 추적할 변수 추가
-    let isTransitionEnabled = true; // 트랜지션 활성화 여부를 추적하는 변수
-
-    // 페이지 로드 후 첫 번째 섹션 표시
-    $("section").hide();
-    $("section").eq(currentSection).show();
 
     const video = document.getElementById("everVideo");
 
@@ -23,65 +17,99 @@ $(document).ready(function () {
             transition: 'all 1s ease-out'
         });
     }, 4000);
-
+    
     $('.hamburger-btn').click(function () {
         $('.right-menu')
-            .animate({'left' : 0}, 1000, 'swing');
+        .animate({'left' : 0}, 1000, 'swing');
     });
-
+    
     $('#closeBtn').click(function () {
         $('.right-menu')
-            .animate({'left' : '-528px'}, 1000, 'swing');
+        .animate({'left' : '-528px'}, 1000, 'swing');
     });
-
-    $(window).on("wheel", function (event) {
-        wheelCount++;
-
-        if (event.originalEvent.deltaY > 0) {
-            // 스크롤 다운 (다음 섹션으로 이동)
-            if (currentSection < totalSections - 1) {
-                $("section").eq(currentSection).slideUp(500);
-                currentSection++;
-                $("section").eq(currentSection).slideDown(500);
-            } 
-        } else {
-            // 스크롤 업 (이전 섹션으로 이동)
-            if (currentSection > 0) {
-                $("section").eq(currentSection).slideUp(500);
-                currentSection--;
-                $("section").eq(currentSection).slideDown(500);
-            }
-        }
     
-        // currentSection에 따라 비디오 표시 여부 업데이트
-        if (currentSection > 0){
-            $(video).css({
-                'display' : 'none',
-                'transition' : 'none'
-            });
-        } else {
-            $(video).css({
-                'display' : 'block',
-                'transition' : 'none'
-            });
-        }
+    $("#top-btn").click(function(){
+        $('html').animate({scrollTop : 0}, 1000);
+    })
+    var scroll = function(){
+        
+    var    $cnt = null,
+            moveCnt = null,
+            moveIndex = 0,
+            moveCntTop = 0,
+            winH = 0,
+            time = false; // 새로 만든 변수
     
-        console.log(currentSection);
+        $(document).ready(function(){
+            init();
+            initEvent();
         });
-    $(document).stop().keydown(function(event) {
-        if (event.which === 40) {
-            if (currentSection < totalSections) {
-                $("section").eq(currentSection).slideDown(500);
-                currentSection++;
-                $("section").eq(currentSection).slideUp(0);
-            } 
-        } else if (event.which === 38) {
-            if (currentSection >= 0) {
-                $("section").eq(currentSection).slideUp(500);
-                currentSection--;
-                $("section").eq(currentSection).slideDown(0);
+        
+        var init = function(){
+            $cnt = $("main");
+        };
+        
+        var initEvent = function(){
+            $("html ,body").scrollTop(0);
+            winResize();
+            $(window).resize(function(){
+                winResize();
+            });
+            $(document).on({"mousewheel" : function(e){
+                if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
+                wheel(e);
+                }
             }
-        }
-        console.log('현재 섹션 번호: ' + currentSection); // 현재 섹션 번호 출력
-    });
+            });
+        };
+            
+        var winResize = function(){
+            winH = $(window).height();
+            $cnt.children("section").height(winH);
+            $("html ,body").scrollTop(moveIndex.scrollTop);
+        };
+        
+        var wheel = function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                if(moveIndex < totalSections){
+                    moveIndex += 1;
+                    moving(moveIndex);
+                };
+            }else{
+                if(moveIndex > 0){
+                    moveIndex -= 1;
+                    moving(moveIndex);
+                };
+            };
+        };
+        
+        var moving = function(index){
+            time = true // 휠 이벤트가 실행 동시에 true로 변경
+            moveCnt = $("section").eq(index);
+            moveCntTop = moveCnt.offset().top;
+            $("html ,body").stop().animate({
+                scrollTop: moveCntTop
+            }, 1000, function(){
+            time = false; // 휠 이벤트가 끝나면 false로 변경
+            });
+        };
+        
+    };
+    
+    scroll();
+    
+
+    console.log($('main').scrollTop())
+
+    if (currentSection > 0){
+        $(video).css({
+            'opacity' : 0,
+            'transition' : 'all 0.3s linear'
+        });
+    } else {
+        $(video).css({
+            'opacity' : 1,
+            'transition' : 'all 0.3s linear'
+        });
+    }
 });
