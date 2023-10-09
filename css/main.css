@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-body {
+html {
+    overflow-x: hidden;
     overflow-y: hidden;
-    position: relative;
 }
 
 section {
@@ -321,20 +321,21 @@ opacity: 1;
     font-size: 80px;
 }
 
-.attr-info .left .attr-bg {
-    margin-left: 120px;
+.attr-info .attr-bg {
+    height: 100vh;
+    left: 20%;
+    width: 200vh;
     position: relative;
-    width: 550px;
-    height: 693px;
-    background-position-x: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    top: -100vh;
+    z-index: 1;
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
 
 .attr-info .left .attr-bg::after {
     content: '';
     position: absolute;
-    right: -200px; top: 0;
+    right: -100px; top: 0;
     height: 100%;
     width: 1px;
     border-left: 1px solid #fff;
@@ -342,9 +343,11 @@ opacity: 1;
 }
 
 .attr-info .left .attr-bg > img {
+    opacity: 0;
     position: absolute;
-    left: 0;
+    left: -27.1%;
     top:  0;
+    transition: all 1s ease-in;
 }
 
 .attr-info .left .h2-button{
@@ -353,6 +356,7 @@ opacity: 1;
 }
 
 .attr-info .left h2 {
+    z-index: 2;
     position: relative;
     margin-top: 60px;
     font-size: 250px;
@@ -370,6 +374,7 @@ opacity: 1;
 }
 
 .attr-info .right {
+    height: 100vh;
     width: 30%;
     background: #7182B4;
 }
@@ -461,11 +466,22 @@ opacity: 1;
     background-color: #293630;
 }
 
-
 .zooto-info .zooto-bg {
+    background-size: contain;
+    position: relative;
+    width: 200vh;
+    height: 100vh;
+    left: -50%;
+    top: -93%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+
+/* .zooto-info .zooto-bg {
     position: relative;
     height: 500px;
-}
+} */
 
 .zooto-info h2 {
     position: absolute;
@@ -555,7 +571,7 @@ opacity: 1;
 }
 
 .planto-info h2 {
-    z-index: 0;
+    z-index: 1;
     position: relative;
     margin-top: 50px;
     font-size: 235px;
