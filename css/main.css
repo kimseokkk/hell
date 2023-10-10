@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+
+button {
+    cursor: pointer;
+}
+
 html {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -17,7 +22,7 @@ h2 {
     text-align: left;
     color: #FFF;
     text-shadow: 22px 22px 4px rgba(0, 0, 0, 0.25);
-    font-family: Caledo;
+    font-family: "Caledo Light";
     font-size: 400px;
     font-style: normal;
     font-weight: 300;
@@ -469,9 +474,9 @@ opacity: 1;
 .zooto-info .zooto-bg {
     background-size: contain;
     position: relative;
-    width: 200vh;
+    width: 100%;
     height: 100vh;
-    left: -50%;
+    left: -30%;
     top: -93%;
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -597,6 +602,7 @@ opacity: 1;
 
 .planto-info .img-box {
     position: relative;
+    left: 10%;
     height: 100%;
 }
 

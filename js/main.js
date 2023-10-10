@@ -25,13 +25,6 @@ $('#closeBtn').click(function () {
     $('.right-menu').animate({ 'left': '-528px' }, 1000, 'swing');
 });
 
-$("#top-btn").click(function () {
-    $('html , body').animate({ scrollTop: 0 }, 1000, function () {
-        // 'top-btn' 클릭 이벤트 후에 'scroll()' 함수를 호출하고 moveIndex를 초기화
-        scroll();
-    });
-});
-
     
 function scroll() {
     var $cnt = null,
@@ -85,6 +78,13 @@ function scroll() {
         };
     };
 
+    $("#top-btn").click(function () {
+        $('html , body').animate({ scrollTop: 0 }, 1000, function () {
+            // 'top-btn' 클릭 이벤트 후에 'scroll()' 함수를 호출하고 moveIndex를 초기화
+            moveIndex = 0; // 스크롤이 완료되면 moveIndex 초기화
+        });
+    });
+
     
     var moving = function (index) {
         time = true;
@@ -135,9 +135,9 @@ function scroll() {
             case 4:
                 // 4번 섹션에서 실행할 애니메이션 코드
                 $('.zooto-info .zooto-bg').css({
-                    'left': '-20%',
+                    'left': '-10%',
                     'top': '0',
-                    'height': '500px',
+                    'height': '70%',
                     'width': '',
                     'opacity': 1
                 });
